@@ -1,1 +1,56 @@
-[{"id":1,"name":"easy math","ask":"What is the result? 5 + 3","answer":8},{"id":2,"name":"Mystery","ask":"I speak without a mouth. What am I?","answer":"echo"},{"id":3,"name":"hard","ask":"I start at night, end in the morning, and I have no body. What am I?","answer":"dream"},{"id":4,"name":"easy","ask":"What is 2 + 2?","answer":"4"},{"id":4,"name":"easy","ask":"What is 2 + 2?","answer":"4"},{"id":4,"name":"easy","ask":"What is 2 + 2?","answer":"4"},{"id":4,"name":"easy","ask":"What is 2 + 2?","answer":"4"}]
+[
+  {
+    "id": 2,
+    "name": "dsfds",
+    "ask": "sdccsdvcs",
+    "answer": "vsdvfsdv"
+  },
+  {
+    "id": 3,
+    "name": "easy math",
+    "ask": "What is 6 × 2?",
+    "answer": "12"
+  },
+  {
+    "id": 4,
+    "name": "easy math",
+    "ask": "What is 9 ÷ 3?",
+    "answer": "3"
+  },
+  {
+    "id": 5,
+    "name": "easy math",
+    "ask": "What is 7 + 5?",
+    "answer": "12"
+  },
+  {
+    "id": 6,
+    "name": "easy math",
+    "ask": "What is 10 - 4?",
+    "answer": "6"
+  },
+  {
+    "id": 7,
+    "name": "easy math",
+    "ask": "What is 3 × 3?",
+    "answer": "9"
+  },
+  {
+    "id": 8,
+    "name": "easy math",
+    "ask": "What is 12 ÷ 4?",
+    "answer": "3"
+  },
+  {
+    "id": 9,
+    "name": "easy math",
+    "ask": "What is 8 + 1?",
+    "answer": "9"
+  },
+  {
+    "id": 10,
+    "name": "easy math",
+    "ask": "What is 6 - 2?",
+    "answer": "4"
+  }
+]

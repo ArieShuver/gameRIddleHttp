@@ -1,62 +1,39 @@
 import rl from "readline-sync";
-import { easytMath } from "./riddles/EasyMath.js"
-import { Mystery } from "./riddles/Mystery.js";
+import readlineSync from "readline-sync";
 import Player from "./classes/Player.js"
-import { hard } from "./riddles/hard.js";
 import { getTime } from "./utils/time.js";
+import { AllRiddles, addRiddle, updateRiddle, deleteRiddle } from "./utils/function.js";
 
+async function mainMenu() {
+  while (true) {
+    console.log("\n=== Riddle Game Menu ===");
+    console.log("1. Show all riddles");
+    console.log("2. Add a riddle");
+    console.log("3. Update a riddle");
+    console.log("4. Delete a riddle");
+    console.log("5. Exit");
 
-
-
- initGame();
-
-
-
-
-function initGame() {
-    const name = bootPlty();
-    const start = getTime();
-    // level();
-    // const a = new 
-    AllRiddles();
-    const end = getTime();
-    getPlayer(name, start, end)
-}
-
-function getPlayer(name, start, end) {
-    const player1 = new Player(name)
-    player1.time(start, end)
-    console.log(player1.showStats());
-}
-
-function bootPlty() {
-    console.log("welcome the game");
-    const name = rl.question("what is your name?")
-    return name;
-}
-
-
-function level() {
-    const difficoultyLevel = rl.question("Choose difficulty: easy - 1 / medium - 2 / hard - 3:")
-    switch (difficoultyLevel) {
-        case "1":
-            easytMath.DisplaysTheRiddle();
-            break;
-        case "2":
-            Mystery.DisplaysTheRiddle();
-            break;
-        case "3":
-            hard.DisplaysTheRiddle();
-            break;
-
+    const choice = rl.question("Choose an option (1-5): ");
+    switch (choice) {
+      case "1":
+        await AllRiddles();
+        break;
+      case "2":
+        await addRiddle();
+        break;
+      case "3":
+        await updateRiddle();
+        break;
+      case "4":
+        await deleteRiddle();
+        break;
+      case "5":
+        console.log("Bye!");
+        process.exit(0);
+      default:
+        console.log("Invalid choice. Please choose 1-5.");
     }
+  }
 }
 
-function AllRiddles() {
-    const aar = [easytMath, Mystery, hard]
-    for (const element of aar) {
-        element.displaysTheRiddle()
-        element.ask()
-    }
-}
-
+mainMenu();

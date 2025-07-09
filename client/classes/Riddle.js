@@ -23,7 +23,7 @@ class Riddle {
 }
 
 function compatibilityCheck(item1, item2) {
-    return (item1 === item2)
+    return (item1 == item2)
 }
 
 export default Riddle

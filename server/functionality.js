@@ -86,13 +86,4 @@ export {
     deleteRiddle
 }
 
-// export async function readBady(req) {
-//     let body = [];
-//     req.on("data", chunk => {
-//         body.push(chunk);
-//     });
-//     req.on("end", () => {
-//         const data = JSON.parse(Buffer.concat(body).toString());
-//     });
 
-// }

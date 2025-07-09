@@ -6,20 +6,21 @@ const path = "./fileText.txt";
 
 const server = http.createServer(async (req, res) => {
     if (req.method === "GET" && req.url === "/riddles") {
-        response = await read(path)
-        res.writeHead(200, { "content-type": "application/json" });
+        const arr = await read(path)
+        res.writeHead(200, { "content-type": "application/json" })
+        res.end(JSON.stringify(arr));
+        console.log(arr);
+
     }
     else if (req.method.toUpperCase() === "POST" && req.url === "/riddles/addRiddle ") {
         const data = await readBody(req);
-        console.log('add', req);
         await create(path, data)
         res.writeHead(200, { "content-type": "application/json" });
-        res.end(JSON.stringify({ message: "Riddle added successfully" }));
+        res.end(JSON.stringify({ message: "Riddle add" }))
     }
     else if (req.method.toUpperCase() === "PUT" && req.url === "/riddles/updateRiddle") {
         const data = await readBody(req);
         await update(data.id, data, path)
-        console.log('cecvrdc');
         res.writeHead(200, { "content-type": "application/json" });
         res.end(JSON.stringify({ message: "Riddle updated successfully" }))
     }
